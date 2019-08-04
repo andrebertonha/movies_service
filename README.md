@@ -1,5 +1,5 @@
 # Movies Service
-### arquitetura microservice
+### arquitetura microservice integrado com cinema-catalog-service
 
 ### Instruções
   

@@ -1,24 +1,21 @@
 # Movies Service
-### arquitetura microservice integrado com cinema-catalog-service
+### Arquitetura microservice integrado com cinema-catalog-service
 
 ### Instruções
   
   + npm install
-  + use a seguinte estrutura:
+  + Schema:
   ```
   {
-     _id: ObjectId("sacbaskbcksabckscstds67ds"),
-     titulo: "Vingadores: Guerra Infinita",
-     sinopse: "Os heróis mais poderosos da Marvel enfrentando o Thanos",
-     duracao: 120,
-     dataLancamento: ISODate("2018-05-01T00:00:00Z"),
-     imagem: "https://www.luiztools.com.br/vingadores-gi.jpg",
-     categorias: ["Aventura", "Ação"]
+      titulo: { type: String, required: true },
+      sinopse: String,
+      duracao: { type: Number, required: true, min: [90, 'duracao minima 1h 30min'] },
+      dataLancamento: { type: Date },
+      imagem: String,
+      categorias: [String]
   }
   ```
-  + optei por utilizar o docker para este projeto
-  + faça alguns inserts no banco para poder testar
-  + subir o container (docker)
+  + docker start movie_service
   + npm start
   + npm test
 
